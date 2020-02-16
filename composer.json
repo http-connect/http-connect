@@ -1,0 +1,52 @@
+{
+    "name": "stevanpavlovic/http-connect",
+    "description": "PHP library useful for easy creation of HTTP API clients.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/stevanpavlovic/http-connect",
+    "authors": [
+        {
+            "name": "Stevan Pavlovic",
+            "email": "pavlovicmstevan@gmail.com",
+            "homepage": "https://stevanpavlovic.github.io",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.2",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "monolog/monolog": "^2.0",
+        "nyholm/psr7": "^1.2",
+        "psr/container": "^1.0",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/log": "^1.1",
+        "rize/uri-template": "^0.3.2",
+        "symfony/http-client": "^5.0",
+        "symfony/validator": "^5.0",
+        "teapot/status-code": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "StevanPavlovic\\HttpConnect\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "StevanPavlovic\\HttpConnect\\Test\\": "tests/",
+            "StevanPavlovic\\HttpConnect\\Example\\": "examples/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist"
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}

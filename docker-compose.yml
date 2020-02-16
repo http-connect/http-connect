@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  http-connect-php:
+    container_name: http-connect-php
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html:cached
