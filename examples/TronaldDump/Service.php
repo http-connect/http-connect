@@ -4,7 +4,8 @@ namespace StevanPavlovic\HttpConnect\Example\TronaldDump;
 
 use StevanPavlovic\HttpConnect\Action\ActionPack;
 use StevanPavlovic\HttpConnect\Auth\NoAuth;
-use StevanPavlovic\HttpConnect\Environment\ProductionEnvironment;
+use StevanPavlovic\HttpConnect\Config\Repository as Config;
+use StevanPavlovic\HttpConnect\Environment\Environment;
 use StevanPavlovic\HttpConnect\Example\TronaldDump\Quote\Action\GetRandomQuote;
 use StevanPavlovic\HttpConnect\Service as ConnectService;
 
@@ -19,7 +20,9 @@ class Service extends ConnectService
             new GetRandomQuote(),
         ]);
 
-        $environment = new ProductionEnvironment(new NoAuth(), self::BASE_URI);
+        $environment = new Environment(new NoAuth(), new Config([
+            'base_uri' => self::BASE_URI,
+        ]));
 
         parent::__construct($actionPack, $environment);
     }

@@ -2,6 +2,7 @@
 
 namespace StevanPavlovic\HttpConnect\Environment;
 
+use Psr\Container\ContainerInterface;
 use Psr\Http\Client\ClientInterface;
 use StevanPavlovic\HttpConnect\Auth\AuthInterface;
 
@@ -18,7 +19,7 @@ interface EnvironmentInterface
     public function getAuth(): AuthInterface;
 
     /**
-     * @return string
+     * @return ContainerInterface
      */
-    public function getKey(): string;
+    public function getConfig(): ContainerInterface;
 }

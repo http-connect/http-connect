@@ -2,13 +2,15 @@
 
 namespace StevanPavlovic\HttpConnect\Environment;
 
+use Psr\Container\ContainerInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Log\LoggerInterface;
 use StevanPavlovic\HttpConnect\Auth\AuthInterface;
 use Symfony\Component\HttpClient\CurlHttpClient;
 use Symfony\Component\HttpClient\Psr18Client;
 
-abstract class Environment implements EnvironmentInterface
+class Environment implements EnvironmentInterface
 {
     /**
      * @var ClientInterface
@@ -16,25 +18,27 @@ abstract class Environment implements EnvironmentInterface
     private $client;
 
     /**
-     * @var AuthInterface
-     */
-    private $auth;
-
-    /**
      * @param AuthInterface $auth
-     * @param string|null $baseUri
+     * @param ContainerInterface|null $config
      * @param ClientInterface|null $client
      * @param LoggerInterface|null $logger
      */
     public function __construct(
         AuthInterface $auth,
-        ?string $baseUri = null,
+        ContainerInterface $config,
         ?ClientInterface $client = null,
         ?LoggerInterface $logger = null
     ) {
+        try {
+            /** @var string $baseUri */
+            $baseUri = $config->get('base_uri');
+        } catch (NotFoundExceptionInterface $e) {
+            $baseUri = '/';
+        }
+
         if ($client === null) {
             $curlClient = new CurlHttpClient([
-                'base_uri' => $baseUri ?: '/',
+                'base_uri' => $baseUri,
             ]);
 
             if ($logger !== null) {
@@ -47,6 +51,11 @@ abstract class Environment implements EnvironmentInterface
         $this->auth = $auth;
         $this->client = $client;
     }
+
+    /**
+     * @var AuthInterface
+     */
+    private $auth;
 
     /**
      * @return ClientInterface
@@ -62,5 +71,13 @@ abstract class Environment implements EnvironmentInterface
     public function getAuth(): AuthInterface
     {
         return $this->auth;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getConfig(): ContainerInterface
+    {
+        return $this->config;
     }
 }

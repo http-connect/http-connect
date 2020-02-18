@@ -17,7 +17,7 @@ class ServiceTest extends TestCase
      * @throws ClientExceptionInterface
      * @throws InputValidationFailedException
      */
-    public function testGetRandomQuoteRetunsResource(): void
+    public function testGetRandomQuoteReturnsResource(): void
     {
         $service = new TronaldDumpService();
 

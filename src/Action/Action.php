@@ -51,7 +51,7 @@ abstract class Action implements ActionInterface
         return '1.1';
     }
 
-        /**
+    /**
      * @return string
      */
     abstract protected function getMethod(): string;
