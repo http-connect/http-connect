@@ -1,11 +1,11 @@
 <?php
 
 
-namespace StevanPavlovic\HttpConnect\Example\TronaldDump\Quote\Transport;
+namespace HttpConnect\HttpConnect\Example\TronaldDump\Quote\Transport;
 
 use DateTimeImmutable;
-use StevanPavlovic\HttpConnect\Transport\ResourceInterface;
-use StevanPavlovic\HttpConnect\Transport\Traits\StringifiesAsJson;
+use HttpConnect\HttpConnect\Transport\ResourceInterface;
+use HttpConnect\HttpConnect\Transport\Traits\StringifiesAsJson;
 
 class QuoteResource implements ResourceInterface
 {

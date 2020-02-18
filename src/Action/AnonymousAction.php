@@ -1,6 +1,6 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Action;
+namespace HttpConnect\HttpConnect\Action;
 
 use Closure;
 use InvalidArgumentException;
@@ -10,12 +10,12 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UriInterface;
 use Rize\UriTemplate;
-use StevanPavlovic\HttpConnect\Action\Traits\Anonymous;
-use StevanPavlovic\HttpConnect\Action\Traits\Undescribed;
-use StevanPavlovic\HttpConnect\Transport\AnonymousInput;
-use StevanPavlovic\HttpConnect\Transport\AnonymousResource;
-use StevanPavlovic\HttpConnect\Transport\InputInterface;
-use StevanPavlovic\HttpConnect\Transport\ResourceInterface;
+use HttpConnect\HttpConnect\Action\Traits\Anonymous;
+use HttpConnect\HttpConnect\Action\Traits\Undescribed;
+use HttpConnect\HttpConnect\Transport\AnonymousInput;
+use HttpConnect\HttpConnect\Transport\AnonymousResource;
+use HttpConnect\HttpConnect\Transport\InputInterface;
+use HttpConnect\HttpConnect\Transport\ResourceInterface;
 
 final class AnonymousAction extends Action
 {

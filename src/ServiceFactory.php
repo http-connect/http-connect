@@ -1,12 +1,12 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect;
+namespace HttpConnect\HttpConnect;
 
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
-use StevanPavlovic\HttpConnect\Auth\NoAuth;
-use StevanPavlovic\HttpConnect\Environment\EnvironmentInterface;
-use StevanPavlovic\HttpConnect\Environment\Environment;
+use HttpConnect\HttpConnect\Auth\NoAuth;
+use HttpConnect\HttpConnect\Environment\EnvironmentInterface;
+use HttpConnect\HttpConnect\Environment\Environment;
 use Symfony\Component\HttpClient\CurlHttpClient;
 use Symfony\Component\HttpClient\Psr18Client;
 

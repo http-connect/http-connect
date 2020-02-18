@@ -1,10 +1,11 @@
 <?php
 
-namespace HttpConnect\HttpConnect\Auth;
+namespace HttpConnect\HttpConnect\Example\OpenUV\Auth;
 
 use Psr\Http\Message\RequestInterface;
+use HttpConnect\HttpConnect\Auth\AuthInterface;
 
-class BearerAuth implements AuthInterface
+final class TokenAuth implements AuthInterface
 {
     /**
      * @var string
@@ -19,11 +20,8 @@ class BearerAuth implements AuthInterface
         $this->token = $token;
     }
 
-    /**
-     * @inheritDoc
-     */
     public function decorateRequest(RequestInterface $request): RequestInterface
     {
-        return $request->withHeader('authorization', 'Bearer ' . $this->token);
+        return $request->withHeader('X-Access-Token', $this->token);
     }
 }

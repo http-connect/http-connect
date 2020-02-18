@@ -1,15 +1,15 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Example\TronaldDump\Quote\Action;
+namespace HttpConnect\HttpConnect\Example\TronaldDump\Quote\Action;
 
 use DateTimeImmutable;
 use Nyholm\Psr7\Uri;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\UriInterface;
-use StevanPavlovic\HttpConnect\Action\Action;
-use StevanPavlovic\HttpConnect\Example\TronaldDump\Quote\Transport\QuoteResource;
-use StevanPavlovic\HttpConnect\Transport\InputInterface;
-use StevanPavlovic\HttpConnect\Transport\ResourceInterface;
+use HttpConnect\HttpConnect\Action\Action;
+use HttpConnect\HttpConnect\Example\TronaldDump\Quote\Transport\QuoteResource;
+use HttpConnect\HttpConnect\Transport\InputInterface;
+use HttpConnect\HttpConnect\Transport\ResourceInterface;
 
 final class GetRandomQuote extends Action
 {

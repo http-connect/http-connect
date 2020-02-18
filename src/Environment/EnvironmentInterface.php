@@ -1,10 +1,10 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Environment;
+namespace HttpConnect\HttpConnect\Environment;
 
 use Psr\Container\ContainerInterface;
 use Psr\Http\Client\ClientInterface;
-use StevanPavlovic\HttpConnect\Auth\AuthInterface;
+use HttpConnect\HttpConnect\Auth\AuthInterface;
 
 interface EnvironmentInterface
 {

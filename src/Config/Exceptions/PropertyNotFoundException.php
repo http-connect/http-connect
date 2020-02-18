@@ -1,6 +1,6 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Config\Exceptions;
+namespace HttpConnect\HttpConnect\Config\Exceptions;
 
 use InvalidArgumentException;
 use Psr\Container\NotFoundExceptionInterface;

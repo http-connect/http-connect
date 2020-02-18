@@ -1,19 +1,19 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect;
+namespace HttpConnect\HttpConnect;
 
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Message\RequestInterface;
-use StevanPavlovic\HttpConnect\Action\ActionInterface;
-use StevanPavlovic\HttpConnect\Action\AnonymousAction;
-use StevanPavlovic\HttpConnect\Environment\EnvironmentInterface;
-use StevanPavlovic\HttpConnect\Transport\AnonymousInput;
-use StevanPavlovic\HttpConnect\Transport\AnonymousResource;
-use StevanPavlovic\HttpConnect\Transport\Exceptions\InputValidationFailedException;
-use StevanPavlovic\HttpConnect\Transport\InputInterface;
-use StevanPavlovic\HttpConnect\Transport\ResourceInterface;
+use HttpConnect\HttpConnect\Action\ActionInterface;
+use HttpConnect\HttpConnect\Action\AnonymousAction;
+use HttpConnect\HttpConnect\Environment\EnvironmentInterface;
+use HttpConnect\HttpConnect\Transport\AnonymousInput;
+use HttpConnect\HttpConnect\Transport\AnonymousResource;
+use HttpConnect\HttpConnect\Transport\Exceptions\InputValidationFailedException;
+use HttpConnect\HttpConnect\Transport\InputInterface;
+use HttpConnect\HttpConnect\Transport\ResourceInterface;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 

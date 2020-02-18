@@ -1,15 +1,15 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Test\Example\TronaldDump;
+namespace HttpConnect\HttpConnect\Test\Example\TronaldDump;
 
 use DateTimeImmutable;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Client\ClientExceptionInterface;
-use StevanPavlovic\HttpConnect\Example\TronaldDump\Quote\Action\GetRandomQuote;
-use StevanPavlovic\HttpConnect\Example\TronaldDump\Quote\Transport\QuoteResource;
-use StevanPavlovic\HttpConnect\Example\TronaldDump\Service as TronaldDumpService;
-use StevanPavlovic\HttpConnect\Transport\AnonymousInput;
-use StevanPavlovic\HttpConnect\Transport\Exceptions\InputValidationFailedException;
+use HttpConnect\HttpConnect\Example\TronaldDump\Quote\Action\GetRandomQuote;
+use HttpConnect\HttpConnect\Example\TronaldDump\Quote\Transport\QuoteResource;
+use HttpConnect\HttpConnect\Example\TronaldDump\Service as TronaldDumpService;
+use HttpConnect\HttpConnect\Transport\AnonymousInput;
+use HttpConnect\HttpConnect\Transport\Exceptions\InputValidationFailedException;
 
 class ServiceTest extends TestCase
 {

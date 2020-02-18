@@ -1,6 +1,6 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Action\Exceptions;
+namespace HttpConnect\HttpConnect\Action\Exceptions;
 
 use Exception;
 use Psr\Container\NotFoundExceptionInterface;

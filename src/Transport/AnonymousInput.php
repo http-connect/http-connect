@@ -1,9 +1,9 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Transport;
+namespace HttpConnect\HttpConnect\Transport;
 
-use StevanPavlovic\HttpConnect\Transport\Traits\HasNoValidation;
-use StevanPavlovic\HttpConnect\Transport\Traits\StringifiesAsJson;
+use HttpConnect\HttpConnect\Transport\Traits\HasNoValidation;
+use HttpConnect\HttpConnect\Transport\Traits\StringifiesAsJson;
 
 final class AnonymousInput implements InputInterface
 {

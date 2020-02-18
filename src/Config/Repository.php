@@ -1,9 +1,9 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Config;
+namespace HttpConnect\HttpConnect\Config;
 
 use Psr\Container\ContainerInterface;
-use StevanPavlovic\HttpConnect\Config\Exceptions\PropertyNotFoundException;
+use HttpConnect\HttpConnect\Config\Exceptions\PropertyNotFoundException;
 
 class Repository implements ContainerInterface
 {

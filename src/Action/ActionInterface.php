@@ -1,11 +1,11 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Action;
+namespace HttpConnect\HttpConnect\Action;
 
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use StevanPavlovic\HttpConnect\Transport\InputInterface;
-use StevanPavlovic\HttpConnect\Transport\ResourceInterface;
+use HttpConnect\HttpConnect\Transport\InputInterface;
+use HttpConnect\HttpConnect\Transport\ResourceInterface;
 
 interface ActionInterface
 {

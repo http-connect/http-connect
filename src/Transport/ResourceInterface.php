@@ -1,6 +1,6 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Transport;
+namespace HttpConnect\HttpConnect\Transport;
 
 interface ResourceInterface
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Action;
+namespace HttpConnect\HttpConnect\Action;
 
 use Nyholm\Psr7\Request;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UriInterface;
-use StevanPavlovic\HttpConnect\Transport\InputInterface;
+use HttpConnect\HttpConnect\Transport\InputInterface;
 
 abstract class Action implements ActionInterface
 {

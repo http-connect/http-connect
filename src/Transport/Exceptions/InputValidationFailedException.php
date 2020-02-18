@@ -1,9 +1,9 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Transport\Exceptions;
+namespace HttpConnect\HttpConnect\Transport\Exceptions;
 
 use Exception;
-use StevanPavlovic\HttpConnect\Transport\InputInterface;
+use HttpConnect\HttpConnect\Transport\InputInterface;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
 
 class InputValidationFailedException extends Exception

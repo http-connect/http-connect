@@ -1,6 +1,6 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Action\Traits;
+namespace HttpConnect\HttpConnect\Action\Traits;
 
 trait Anonymous
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Auth;
+namespace HttpConnect\HttpConnect\Auth;
 
 use Psr\Http\Message\RequestInterface;
 

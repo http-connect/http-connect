@@ -1,6 +1,6 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Transport\Traits;
+namespace HttpConnect\HttpConnect\Transport\Traits;
 
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 

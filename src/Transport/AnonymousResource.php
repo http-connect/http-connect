@@ -1,11 +1,11 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Transport;
+namespace HttpConnect\HttpConnect\Transport;
 
 use ArrayAccess;
 use BadMethodCallException;
 use OutOfBoundsException;
-use StevanPavlovic\HttpConnect\Transport\Traits\StringifiesAsJson;
+use HttpConnect\HttpConnect\Transport\Traits\StringifiesAsJson;
 
 final class AnonymousResource implements ResourceInterface, ArrayAccess
 {

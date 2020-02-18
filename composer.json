@@ -1,9 +1,9 @@
 {
-    "name": "stevanpavlovic/http-connect",
+    "name": "http-connect/http-connect",
     "description": "PHP library useful for easy creation of HTTP API clients.",
     "type": "library",
     "license": "MIT",
-    "homepage": "https://github.com/stevanpavlovic/http-connect",
+    "homepage": "https://github.com/http-connect",
     "authors": [
         {
             "name": "Stevan Pavlovic",
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "StevanPavlovic\\HttpConnect\\": "src"
+            "HttpConnect\\HttpConnect\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "StevanPavlovic\\HttpConnect\\Test\\": "tests/",
-            "StevanPavlovic\\HttpConnect\\Example\\": "examples/"
+            "HttpConnect\\HttpConnect\\Test\\": "tests/",
+            "HttpConnect\\HttpConnect\\Example\\": "examples/"
         }
     },
     "config": {

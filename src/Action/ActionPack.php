@@ -1,11 +1,11 @@
 <?php
 
-namespace StevanPavlovic\HttpConnect\Action;
+namespace HttpConnect\HttpConnect\Action;
 
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
-use StevanPavlovic\HttpConnect\Action\Exceptions\ActionNotFoundException;
-use StevanPavlovic\HttpConnect\Action\Exceptions\InvalidActionException;
+use HttpConnect\HttpConnect\Action\Exceptions\ActionNotFoundException;
+use HttpConnect\HttpConnect\Action\Exceptions\InvalidActionException;
 
 class ActionPack implements ContainerInterface
 {
