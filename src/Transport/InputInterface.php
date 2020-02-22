@@ -2,16 +2,10 @@
 
 namespace HttpConnect\HttpConnect\Transport;
 
-use Symfony\Component\Validator\Mapping\ClassMetadata;
+use HttpConnect\HttpConnect\Validation\ValidatorMetadataInterface;
 
-interface InputInterface
+interface InputInterface extends ValidatorMetadataInterface
 {
-    /**
-     * @param ClassMetadata $metadata
-     * @return void
-     */
-    public static function loadValidatorMetadata(ClassMetadata $metadata): void;
-
     /**
      * @return string
      */

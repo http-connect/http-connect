@@ -1,17 +1,17 @@
 <?php
 
-namespace HttpConnect\HttpConnect\Transport\Exceptions;
+namespace HttpConnect\HttpConnect\Validation\Exceptions;
 
 use Exception;
-use HttpConnect\HttpConnect\Transport\InputInterface;
+use HttpConnect\HttpConnect\Validation\ValidatorMetadataInterface;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
 
-class InputValidationFailedException extends Exception
+class MetadataValidationFailedException extends Exception
 {
     /**
-     * @var InputInterface
+     * @var ValidatorMetadataInterface
      */
-    private $input;
+    private $target;
 
     /**
      * @var ConstraintViolationListInterface
@@ -19,20 +19,20 @@ class InputValidationFailedException extends Exception
     private $violations;
 
     /**
-     * @return InputInterface
+     * @return ValidatorMetadataInterface
      */
-    public function getInput(): InputInterface
+    public function getTarget(): ValidatorMetadataInterface
     {
-        return $this->input;
+        return $this->target;
     }
 
     /**
-     * @param InputInterface $input
+     * @param ValidatorMetadataInterface $target
      * @return void
      */
-    public function setInput(InputInterface $input): void
+    public function setTarget(ValidatorMetadataInterface $target): void
     {
-        $this->input = $input;
+        $this->target = $target;
     }
 
     /**

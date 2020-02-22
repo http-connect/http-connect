@@ -2,12 +2,18 @@
 
 namespace HttpConnect\HttpConnect\Environment;
 
-use Psr\Container\ContainerInterface;
+use HttpConnect\HttpConnect\Config\RepositoryInterface;
 use Psr\Http\Client\ClientInterface;
 use HttpConnect\HttpConnect\Auth\AuthInterface;
+use Psr\Log\LoggerInterface;
 
 interface EnvironmentInterface
 {
+    /**
+     * @return string|null
+     */
+    public function getBaseUri(): ?string;
+
     /**
      * @return ClientInterface
      */
@@ -19,7 +25,12 @@ interface EnvironmentInterface
     public function getAuth(): AuthInterface;
 
     /**
-     * @return ContainerInterface
+     * @return RepositoryInterface
      */
-    public function getConfig(): ContainerInterface;
+    public function getConfig(): RepositoryInterface;
+
+    /**
+     * @return LoggerInterface|null
+     */
+    public function getLogger(): ?LoggerInterface;
 }

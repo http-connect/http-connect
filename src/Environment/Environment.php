@@ -2,55 +2,18 @@
 
 namespace HttpConnect\HttpConnect\Environment;
 
-use Psr\Container\ContainerInterface;
+use HttpConnect\HttpConnect\Config\RepositoryInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Log\LoggerInterface;
 use HttpConnect\HttpConnect\Auth\AuthInterface;
-use Symfony\Component\HttpClient\CurlHttpClient;
-use Symfony\Component\HttpClient\Psr18Client;
 
 class Environment implements EnvironmentInterface
 {
     /**
-     * @var ClientInterface
+     * @var string|null
      */
-    private $client;
-
-    /**
-     * @param AuthInterface $auth
-     * @param ContainerInterface|null $config
-     * @param ClientInterface|null $client
-     * @param LoggerInterface|null $logger
-     */
-    public function __construct(
-        AuthInterface $auth,
-        ContainerInterface $config,
-        ?ClientInterface $client = null,
-        ?LoggerInterface $logger = null
-    ) {
-        try {
-            /** @var string $baseUri */
-            $baseUri = $config->get('base_uri');
-        } catch (NotFoundExceptionInterface $e) {
-            $baseUri = '/';
-        }
-
-        if ($client === null) {
-            $curlClient = new CurlHttpClient([
-                'base_uri' => $baseUri,
-            ]);
-
-            if ($logger !== null) {
-                $curlClient->setLogger($logger);
-            }
-
-            $client = new Psr18Client($curlClient);
-        }
-
-        $this->auth = $auth;
-        $this->client = $client;
-    }
+    private $baseUri;
 
     /**
      * @var AuthInterface
@@ -58,15 +21,56 @@ class Environment implements EnvironmentInterface
     private $auth;
 
     /**
-     * @return ClientInterface
+     * @var ClientInterface
      */
-    public function getClient(): ClientInterface
-    {
-        return $this->client;
+    private $client;
+
+    /**
+     * @var RepositoryInterface
+     */
+    private $config;
+
+    /**
+     * @var LoggerInterface|null
+     */
+    private $logger;
+
+    /**
+     * @param AuthInterface $auth
+     * @param RepositoryInterface $config
+     * @param ClientInterface|null $client
+     * @param LoggerInterface|null $logger
+     */
+    public function __construct(
+        AuthInterface $auth,
+        RepositoryInterface $config,
+        ?ClientInterface $client = null,
+        ?LoggerInterface $logger = null
+    ) {
+        try {
+            /** @var string $baseUri */
+            $baseUri = $config->get('base_uri');
+        } catch (NotFoundExceptionInterface $e) {
+            $baseUri = null;
+        }
+
+        $this->baseUri = $baseUri;
+        $this->auth = $auth;
+        $this->client = $client;
+        $this->config = $config;
+        $this->logger = $logger;
     }
 
     /**
-     * @return AuthInterface
+     * @inheritDocsudo apt update
+     */
+    public function getBaseUri(): ?string
+    {
+        return $this->baseUri;
+    }
+
+    /**
+     * @inheritDoc
      */
     public function getAuth(): AuthInterface
     {
@@ -76,8 +80,24 @@ class Environment implements EnvironmentInterface
     /**
      * @inheritDoc
      */
-    public function getConfig(): ContainerInterface
+    public function getClient(): ClientInterface
+    {
+        return $this->client;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getConfig(): RepositoryInterface
     {
         return $this->config;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getLogger(): ?LoggerInterface
+    {
+        return $this->logger;
     }
 }

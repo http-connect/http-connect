@@ -32,9 +32,7 @@ class BasicAuth implements AuthInterface
     public function decorateRequest(RequestInterface $request): RequestInterface
     {
         $value = 'Basic ' . base64_encode($this->username . (
-            $this->password !== ''
-                ? ':' . $this->password
-                : ''
+            $this->password ? ":{$this->password}" : ''
         ));
 
         return $request->withHeader('authorization', $value);
