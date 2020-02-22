@@ -1,6 +1,6 @@
 <?php
 
-namespace HttpConnect\HttpConnect\Service\Strategy;
+namespace HttpConnect\HttpConnect\Service\External;
 
 use Composer\Semver\Semver;
 use OutOfBoundsException;
@@ -50,7 +50,7 @@ class DependencyRequirement implements RequirementInterface
     public function getSolution(): string
     {
         $versionPart = $this->versionConstraints
-            ? " or its version does not satisfy `{$this->packageName}`"
+            ? " or its version does not satisfy `{$this->versionConstraints}`"
             : '';
 
         return "Dependency `{$this->packageName}` is not installed{$versionPart}.";

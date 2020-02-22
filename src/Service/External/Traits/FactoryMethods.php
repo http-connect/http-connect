@@ -1,6 +1,6 @@
 <?php
 
-namespace HttpConnect\HttpConnect\Service\Strategy\Traits;
+namespace HttpConnect\HttpConnect\Service\External\Traits;
 
 use HttpConnect\HttpConnect\Auth\AuthInterface;
 use HttpConnect\HttpConnect\Auth\NoAuth;
@@ -8,7 +8,6 @@ use HttpConnect\HttpConnect\Config\Config;
 use HttpConnect\HttpConnect\Config\RepositoryInterface;
 use HttpConnect\HttpConnect\Environment\Environment;
 use HttpConnect\HttpConnect\Environment\EnvironmentInterface;
-use HttpConnect\HttpConnect\Service\Traits\Describe;
 use HttpConnect\HttpConnect\Validation\Exceptions\MetadataValidationFailedException;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
@@ -16,8 +15,6 @@ use Psr\Log\LoggerInterface;
 
 trait FactoryMethods
 {
-    use Describe;
-
     /**
      * @param array $rawConfig
      * @return EnvironmentInterface

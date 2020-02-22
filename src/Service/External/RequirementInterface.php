@@ -1,6 +1,6 @@
 <?php
 
-namespace HttpConnect\HttpConnect\Service\Strategy;
+namespace HttpConnect\HttpConnect\Service\External;
 
 interface RequirementInterface
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace HttpConnect\HttpConnect\Service\Strategy\Exceptions;
+namespace HttpConnect\HttpConnect\Service\External\Exceptions;
 
 use Exception;
-use HttpConnect\HttpConnect\Service\Strategy\RequirementInterface;
+use HttpConnect\HttpConnect\Service\External\RequirementInterface;
 use Throwable;
 
 class RequirementNotMetException extends Exception

@@ -4,14 +4,12 @@ namespace HttpConnect\HttpConnect\Service;
 
 use HttpConnect\HttpConnect\Action\ActionPack;
 use HttpConnect\HttpConnect\Service\Traits\ConventionalCalls;
-use HttpConnect\HttpConnect\Service\Traits\Describe;
 use Psr\Container\ContainerInterface;
 use HttpConnect\HttpConnect\Environment\EnvironmentInterface;
 
 class Service implements ServiceInterface
 {
     use ConventionalCalls;
-    use Describe;
 
     /**
      * @param ContainerInterface $actionPack
@@ -21,7 +19,6 @@ class Service implements ServiceInterface
         ?ContainerInterface $actionPack,
         EnvironmentInterface $environment
     ) {
-        $this->describeFromConfig($environment->getConfig());
         $this->actionPack = $actionPack ?: static::createActionPack();
         $this->environment = $environment;
     }

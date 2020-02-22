@@ -12,6 +12,8 @@ use HttpConnect\HttpConnect\Validation\Exceptions\MetadataValidationFailedExcept
 use HttpConnect\HttpConnect\Validation\Traits\HandlesMetadataValidation;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Log\LoggerInterface;
 
 trait ActionCall
 {
@@ -37,6 +39,20 @@ trait ActionCall
         $request = $this->environment->getAuth()->decorateRequest($action->createRequest($input));
         $response = $this->environment->getClient()->sendRequest($request);
 
+        $this->createLog($response);
+
         return $action->transformResponse($response);
+    }
+
+    /**
+     * @param ResponseInterface $response
+     */
+    private function createLog(ResponseInterface $response): void
+    {
+        if ($this->environment->getLogger() === null) {
+            return;
+        }
+
+        $this->environment->getLogger()->info('nesto');
     }
 }

@@ -1,16 +1,16 @@
 <?php
 
-namespace HttpConnect\HttpConnect\Service\Strategy;
+namespace HttpConnect\HttpConnect\Service\External;
 
 use HttpConnect\HttpConnect\Config\RepositoryInterface;
 use HttpConnect\HttpConnect\Service\Service;
-use HttpConnect\HttpConnect\Service\Strategy\Traits\FactoryMethods;
-use HttpConnect\HttpConnect\Service\Strategy\Traits\RequirementChecker;
+use HttpConnect\HttpConnect\Service\External\Traits\FactoryMethods;
+use HttpConnect\HttpConnect\Service\External\Traits\RequirementChecker;
 use Psr\Http\Client\ClientInterface;
 use Symfony\Component\HttpClient\CurlHttpClient;
 use Symfony\Component\HttpClient\Psr18Client;
 
-class SymfonyHttpClientService extends Service implements StrategyInterface
+class SymfonyHttpClientAdapterService extends Service implements AdapterInterface
 {
     use RequirementChecker;
     use FactoryMethods;

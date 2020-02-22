@@ -1,6 +1,6 @@
 <?php
 
-namespace HttpConnect\HttpConnect\Service\Strategy;
+namespace HttpConnect\HttpConnect\Service\External;
 
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\MessageFormatter;
@@ -11,11 +11,11 @@ use HttpConnect\HttpConnect\Validation\Exceptions\MetadataValidationFailedExcept
 use RicardoFiorani\GuzzlePsr18Adapter\Client as GuzzleClient;
 use HttpConnect\HttpConnect\Config\RepositoryInterface;
 use HttpConnect\HttpConnect\Service\Service;
-use HttpConnect\HttpConnect\Service\Strategy\Traits\FactoryMethods;
-use HttpConnect\HttpConnect\Service\Strategy\Traits\RequirementChecker;
+use HttpConnect\HttpConnect\Service\External\Traits\FactoryMethods;
+use HttpConnect\HttpConnect\Service\External\Traits\RequirementChecker;
 use Psr\Http\Client\ClientInterface;
 
-class GuzzleService extends Service implements StrategyInterface
+class GuzzleAdapterService extends Service implements AdapterInterface
 {
     use RequirementChecker;
     use FactoryMethods;

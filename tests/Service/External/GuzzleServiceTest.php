@@ -1,19 +1,18 @@
 <?php
 
-namespace HttpConnect\HttpConnect\Tests\Service\Strategy;
+namespace HttpConnect\HttpConnect\Tests\Service\External;
 
 use HttpConnect\HttpConnect\Action\AnonymousAction;
-use HttpConnect\HttpConnect\Service\Strategy\Exceptions\RequirementNotMetException;
-use HttpConnect\HttpConnect\Service\Strategy\GuzzleService;
-use HttpConnect\HttpConnect\Service\Strategy\SymfonyHttpClientService;
+use HttpConnect\HttpConnect\Service\External\Exceptions\RequirementNotMetException;
+use HttpConnect\HttpConnect\Service\External\GuzzleAdapterService;
 use HttpConnect\HttpConnect\Validation\Exceptions\MetadataValidationFailedException;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Client\ClientExceptionInterface;
 
-class SymfonyHttpClientServiceTest extends TestCase
+class GuzzleServiceTest extends TestCase
 {
     /**
-     * @var GuzzleService
+     * @var GuzzleAdapterService
      */
     private $service;
 
@@ -24,7 +23,7 @@ class SymfonyHttpClientServiceTest extends TestCase
     {
         parent::setUp();
 
-        $this->service = new SymfonyHttpClientService([
+        $this->service = new GuzzleAdapterService([
             'baseUri' => 'http://api.tronalddump.io/',
         ]);
     }

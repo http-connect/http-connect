@@ -1,18 +1,19 @@
 <?php
 
-namespace HttpConnect\HttpConnect\Tests\Service\Strategy;
+namespace HttpConnect\HttpConnect\Tests\Service\External;
 
 use HttpConnect\HttpConnect\Action\AnonymousAction;
-use HttpConnect\HttpConnect\Service\Strategy\Exceptions\RequirementNotMetException;
-use HttpConnect\HttpConnect\Service\Strategy\GuzzleService;
+use HttpConnect\HttpConnect\Service\External\Exceptions\RequirementNotMetException;
+use HttpConnect\HttpConnect\Service\External\GuzzleAdapterService;
+use HttpConnect\HttpConnect\Service\External\HttplugAdapterService;
 use HttpConnect\HttpConnect\Validation\Exceptions\MetadataValidationFailedException;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Client\ClientExceptionInterface;
 
-class GuzzleServiceTest extends TestCase
+class HttplugServiceTest extends TestCase
 {
     /**
-     * @var GuzzleService
+     * @var GuzzleAdapterService
      */
     private $service;
 
@@ -23,7 +24,7 @@ class GuzzleServiceTest extends TestCase
     {
         parent::setUp();
 
-        $this->service = new GuzzleService([
+        $this->service = new HttplugAdapterService([
             'baseUri' => 'http://api.tronalddump.io/',
         ]);
     }

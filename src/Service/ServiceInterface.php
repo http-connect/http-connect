@@ -15,21 +15,6 @@ use Psr\Http\Client\ClientExceptionInterface;
 interface ServiceInterface
 {
     /**
-     * @return string
-     */
-    public function getId(): string;
-
-    /**
-     * @return string
-     */
-    public function getName(): string;
-
-    /**
-     * @return string
-     */
-    public function getDescription(): string;
-
-    /**
      * @return ContainerInterface
      */
     public function getActionPack(): ContainerInterface;

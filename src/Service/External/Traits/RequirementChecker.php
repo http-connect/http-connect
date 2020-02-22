@@ -1,10 +1,10 @@
 <?php
 
-namespace HttpConnect\HttpConnect\Service\Strategy\Traits;
+namespace HttpConnect\HttpConnect\Service\External\Traits;
 
 use HttpConnect\HttpConnect\Environment\EnvironmentInterface;
-use HttpConnect\HttpConnect\Service\Strategy\Exceptions\RequirementNotMetException;
-use HttpConnect\HttpConnect\Service\Strategy\RequirementInterface;
+use HttpConnect\HttpConnect\Service\External\Exceptions\RequirementNotMetException;
+use HttpConnect\HttpConnect\Service\External\RequirementInterface;
 use Psr\Container\ContainerInterface;
 
 trait RequirementChecker

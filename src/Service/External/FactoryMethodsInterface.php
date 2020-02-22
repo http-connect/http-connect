@@ -1,6 +1,6 @@
 <?php
 
-namespace HttpConnect\HttpConnect\Service\Strategy;
+namespace HttpConnect\HttpConnect\Service\External;
 
 use HttpConnect\HttpConnect\Auth\AuthInterface;
 use HttpConnect\HttpConnect\Config\RepositoryInterface;
