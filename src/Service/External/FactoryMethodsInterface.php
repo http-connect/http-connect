@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace HttpConnect\HttpConnect\Service\External;
 
 use HttpConnect\HttpConnect\Auth\AuthInterface;

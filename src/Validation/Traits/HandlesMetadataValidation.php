@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace HttpConnect\HttpConnect\Validation\Traits;
 
 use HttpConnect\HttpConnect\Validation\Exceptions\MetadataValidationFailedException;

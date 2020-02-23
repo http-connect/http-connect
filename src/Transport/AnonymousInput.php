@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace HttpConnect\HttpConnect\Transport;
 
 use HttpConnect\HttpConnect\Transport\Traits\HasNoValidation;

@@ -1,8 +1,8 @@
 <?php
 
+declare(strict_types=1);
 
 namespace HttpConnect\HttpConnect\Service\Traits;
-
 
 use HttpConnect\HttpConnect\Action\ActionInterface;
 use HttpConnect\HttpConnect\Environment\EnvironmentInterface;
@@ -13,7 +13,6 @@ use HttpConnect\HttpConnect\Validation\Traits\HandlesMetadataValidation;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
-use Psr\Log\LoggerInterface;
 
 trait ActionCall
 {

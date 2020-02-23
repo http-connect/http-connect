@@ -19,6 +19,7 @@
         "ext-curl": "*",
         "ext-json": "*",
         "composer/semver": "^1.5",
+        "nyholm/psr7": "^1.2",
         "ocramius/package-versions": "^1.5",
         "psr/container": "^1.0",
         "psr/http-client": "^1.0",
@@ -29,13 +30,12 @@
         "teapot/status-code": "^1.1"
     },
     "require-dev": {
+        "doctrine/coding-standard": "^7.0",
         "monolog/monolog": "^2.0",
-        "nyholm/psr7": "^1.2",
         "php-http/discovery": "^1.7",
         "php-http/logger-plugin": "^1.1",
         "phpunit/phpunit": "^9.0",
         "ricardofiorani/guzzle-psr18-adapter": "^1.0",
-        "squizlabs/php_codesniffer": "^3.5",
         "symfony/http-client": "^5.0",
         "symfony/var-dumper": "^5.0"
     },
@@ -56,6 +56,6 @@
     },
     "scripts": {
         "test": "phpunit",
-        "phpcs": "phpcs"
+        "phpcs": "phpcs -s"
     }
 }

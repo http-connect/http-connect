@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace HttpConnect\HttpConnect\Action;
 
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
-use HttpConnect\HttpConnect\Action\Exceptions\ActionNotFoundException;
-use HttpConnect\HttpConnect\Action\Exceptions\InvalidActionException;
+use HttpConnect\HttpConnect\Action\Exceptions\ActionNotFound;
+use HttpConnect\HttpConnect\Action\Exceptions\InvalidAction;
 
 class ActionPack implements ContainerInterface
 {
@@ -37,7 +39,7 @@ class ActionPack implements ContainerInterface
     public function get($id): ActionInterface
     {
         if (!$this->has($id)) {
-            throw new ActionNotFoundException(
+            throw new ActionNotFound(
                 "Action \"{$id}\" does not exist in the provided container. " .
                 'Make sure you have properly passed it to the container.'
             );
@@ -66,7 +68,7 @@ class ActionPack implements ContainerInterface
     {
         $actionInterfaceClass = ActionInterface::class;
 
-        return new InvalidActionException(
+        return new InvalidAction(
             "Action \"{$id}\" does not implement {$actionInterfaceClass}."
         );
     }

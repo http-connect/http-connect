@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace HttpConnect\HttpConnect\Tests\Service\External;
 
 use HttpConnect\HttpConnect\Action\AnonymousAction;
@@ -39,7 +41,7 @@ class HttplugServiceTest extends TestCase
             AnonymousAction::GET,
             'random/quote',
             [
-                'Accept' => 'application/json'
+                'Accept' => 'application/json',
             ]
         ));
 

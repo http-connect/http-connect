@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace HttpConnect\HttpConnect\Action;
 
 use Closure;
@@ -22,43 +24,31 @@ final class AnonymousAction extends Action
     use Anonymous;
     use Undescribed;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $method;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $uriTemplate;
 
-    /**
-     * @var array
-     */
+    /** @var string[] */
     private $headers;
 
-    /**
-     * @var callable|null
-     */
+    /** @var callable|null */
     private $bodyTransformer;
 
-    /**
-     * @var Closure|null
-     */
+    /** @var Closure|null */
     private $responseTransformer;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $httpVersion;
 
     /**
-     * @param string $method
-     * @param string $uriTemplate
-     * @param array $headers
+     * @param string       $method
+     * @param string       $uriTemplate
+     * @param string[]     $headers
      * @param Closure|null $bodyTransformer
      * @param Closure|null $responseTransformer
-     * @param string $httpVersion
+     * @param string       $httpVersion
      */
     public function __construct(
         string $method,
@@ -76,9 +66,6 @@ final class AnonymousAction extends Action
         $this->httpVersion = $httpVersion;
     }
 
-    /**
-     * @inheritDoc
-     */
     protected function getMethod(): string
     {
         return $this->method;

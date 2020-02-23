@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace HttpConnect\HttpConnect\Service\External\Traits;
 
 use HttpConnect\HttpConnect\Environment\EnvironmentInterface;

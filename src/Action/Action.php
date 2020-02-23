@@ -1,18 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace HttpConnect\HttpConnect\Action;
 
+use HttpConnect\HttpConnect\Transport\InputInterface;
 use Nyholm\Psr7\Request;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UriInterface;
-use HttpConnect\HttpConnect\Transport\InputInterface;
 
 abstract class Action implements ActionInterface
 {
-    /**
-     * @inheritDoc
-     */
     final public function createRequest(InputInterface $input): RequestInterface
     {
         return new Request(
@@ -25,8 +24,7 @@ abstract class Action implements ActionInterface
     }
 
     /**
-     * @param InputInterface $input
-     * @return array
+     * @return array[]
      */
     protected function createHeaders(InputInterface $input): array
     {
@@ -57,6 +55,8 @@ abstract class Action implements ActionInterface
     abstract protected function getMethod(): string;
 
     /**
+     * Creates the URI.
+     *
      * @param InputInterface $input
      * @return UriInterface
      */

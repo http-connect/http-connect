@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace HttpConnect\HttpConnect\Service\Traits;
 
 trait ConventionalCalls
@@ -9,6 +11,7 @@ trait ConventionalCalls
         ActionCall::callAction insteadof AnonymousCall;
         ActionCall::getValidator insteadof AnonymousCall;
         ActionCall::handleMetadataValidation insteadof AnonymousCall;
+        ActionCall::createLog insteadof AnonymousCall;
     }
     use KeyCall {
         ActionCall::callAction insteadof KeyCall;
