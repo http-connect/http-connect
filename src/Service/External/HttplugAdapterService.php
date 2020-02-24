@@ -6,7 +6,7 @@ namespace HttpConnect\HttpConnect\Service\External;
 
 use Http\Client\Common\Plugin\LoggerPlugin;
 use Http\Client\Common\PluginClient;
-use HttpConnect\HttpConnect\Config\RepositoryInterface;
+use HttpConnect\Standard\Config\RepositoryInterface;
 use HttpConnect\HttpConnect\Service\Service;
 use HttpConnect\HttpConnect\Service\External\Traits\FactoryMethods;
 use HttpConnect\HttpConnect\Service\External\Traits\RequirementChecker;

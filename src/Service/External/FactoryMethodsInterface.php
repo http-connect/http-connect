@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace HttpConnect\HttpConnect\Service\External;
 
-use HttpConnect\HttpConnect\Auth\AuthInterface;
-use HttpConnect\HttpConnect\Config\RepositoryInterface;
-use HttpConnect\HttpConnect\Environment\EnvironmentInterface;
+use HttpConnect\Standard\Config\RepositoryInterface;
+use HttpConnect\Standard\EnvironmentInterface;
+use HttpConnect\Standard\AuthInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Log\LoggerInterface;
 

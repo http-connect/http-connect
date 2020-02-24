@@ -6,8 +6,10 @@ namespace HttpConnect\HttpConnect\Service;
 
 use HttpConnect\HttpConnect\Action\ActionPack;
 use HttpConnect\HttpConnect\Service\Traits\ConventionalCalls;
+use HttpConnect\Standard\EnvironmentInterface;
+use HttpConnect\Standard\Plugin\PluginInterface;
+use HttpConnect\Standard\ServiceInterface;
 use Psr\Container\ContainerInterface;
-use HttpConnect\HttpConnect\Environment\EnvironmentInterface;
 
 class Service implements ServiceInterface
 {
@@ -28,16 +30,24 @@ class Service implements ServiceInterface
     /**
      * @return ContainerInterface
      */
-    protected static function createActionPack(): ContainerInterface
+    final public function getActionPack(): ContainerInterface
     {
-        return new ActionPack([]);
+        return $this->actionPack;
+    }
+
+    /**
+     * @return PluginInterface[]
+     */
+    public function getPlugins(): array
+    {
+        return [];
     }
 
     /**
      * @return ContainerInterface
      */
-    final public function getActionPack(): ContainerInterface
+    protected static function createActionPack(): ContainerInterface
     {
-        return $this->actionPack;
+        return new ActionPack([]);
     }
 }

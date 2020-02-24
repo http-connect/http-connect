@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace HttpConnect\HttpConnect\Service\Traits;
 
-use HttpConnect\HttpConnect\Action\ActionInterface;
-use HttpConnect\HttpConnect\Environment\EnvironmentInterface;
-use HttpConnect\HttpConnect\Transport\InputInterface;
-use HttpConnect\HttpConnect\Transport\ResourceInterface;
-use HttpConnect\HttpConnect\Validation\Exceptions\MetadataValidationFailedException;
+use HttpConnect\Standard\Validation\Exceptions\MetadataValidationFailedException;
 use HttpConnect\HttpConnect\Validation\Traits\HandlesMetadataValidation;
+use HttpConnect\Standard\ActionInterface;
+use HttpConnect\Standard\EnvironmentInterface;
+use HttpConnect\Standard\InputInterface;
+use HttpConnect\Standard\ResourceInterface;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;

@@ -6,8 +6,8 @@ namespace HttpConnect\HttpConnect\Service\Traits;
 
 use HttpConnect\HttpConnect\Action\AnonymousAction;
 use HttpConnect\HttpConnect\Transport\AnonymousInput;
-use HttpConnect\HttpConnect\Transport\ResourceInterface;
-use HttpConnect\HttpConnect\Validation\Exceptions\MetadataValidationFailedException;
+use HttpConnect\Standard\ResourceInterface;
+use HttpConnect\Standard\Validation\Exceptions\MetadataValidationFailedException;
 use Psr\Http\Client\ClientExceptionInterface;
 
 trait AnonymousCall

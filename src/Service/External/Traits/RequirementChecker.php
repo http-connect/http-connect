@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace HttpConnect\HttpConnect\Service\External\Traits;
 
-use HttpConnect\HttpConnect\Environment\EnvironmentInterface;
+use HttpConnect\Standard\EnvironmentInterface;
 use HttpConnect\HttpConnect\Service\External\Exceptions\RequirementNotMetException;
 use HttpConnect\HttpConnect\Service\External\RequirementInterface;
 use Psr\Container\ContainerInterface;

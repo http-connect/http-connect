@@ -19,14 +19,10 @@
         "ext-curl": "*",
         "ext-json": "*",
         "composer/semver": "^1.5",
+        "http-connect/standard": "^1.0",
         "nyholm/psr7": "^1.2",
         "ocramius/package-versions": "^1.5",
-        "psr/container": "^1.0",
-        "psr/http-client": "^1.0",
-        "psr/http-factory": "^1.0",
-        "psr/log": "^1.1",
         "rize/uri-template": "^0.3.2",
-        "symfony/validator": "^5.0",
         "teapot/status-code": "^1.1"
     },
     "require-dev": {

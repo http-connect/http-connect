@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace HttpConnect\HttpConnect\Service\External\Traits;
 
-use HttpConnect\HttpConnect\Auth\AuthInterface;
 use HttpConnect\HttpConnect\Auth\NoAuth;
 use HttpConnect\HttpConnect\Config\Config;
-use HttpConnect\HttpConnect\Config\RepositoryInterface;
+use HttpConnect\Standard\Config\RepositoryInterface;
 use HttpConnect\HttpConnect\Environment\Environment;
-use HttpConnect\HttpConnect\Environment\EnvironmentInterface;
-use HttpConnect\HttpConnect\Validation\Exceptions\MetadataValidationFailedException;
+use HttpConnect\Standard\EnvironmentInterface;
+use HttpConnect\Standard\Validation\Exceptions\MetadataValidationFailedException;
+use HttpConnect\Standard\AuthInterface;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Psr\Log\LoggerInterface;

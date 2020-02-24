@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace HttpConnect\HttpConnect\Validation\Traits;
 
-use HttpConnect\HttpConnect\Validation\Exceptions\MetadataValidationFailedException;
-use HttpConnect\HttpConnect\Validation\ValidatorMetadataInterface;
+use HttpConnect\Standard\Validation\Exceptions\MetadataValidationFailedException;
+use HttpConnect\Standard\Validation\ValidatorMetadataInterface;
 
 trait HandlesMetadataValidation
 {

@@ -16,8 +16,8 @@ use HttpConnect\HttpConnect\Action\Traits\Anonymous;
 use HttpConnect\HttpConnect\Action\Traits\Undescribed;
 use HttpConnect\HttpConnect\Transport\AnonymousInput;
 use HttpConnect\HttpConnect\Transport\AnonymousResource;
-use HttpConnect\HttpConnect\Transport\InputInterface;
-use HttpConnect\HttpConnect\Transport\ResourceInterface;
+use HttpConnect\Standard\InputInterface;
+use HttpConnect\Standard\ResourceInterface;
 
 final class AnonymousAction extends Action
 {

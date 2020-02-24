@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace HttpConnect\HttpConnect\Action;
 
-use HttpConnect\HttpConnect\Transport\InputInterface;
+use HttpConnect\Standard\ActionInterface;
+use HttpConnect\Standard\InputInterface;
 use Nyholm\Psr7\Request;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamInterface;
@@ -24,6 +25,7 @@ abstract class Action implements ActionInterface
     }
 
     /**
+     * @param InputInterface $input
      * @return array[]
      */
     protected function createHeaders(InputInterface $input): array

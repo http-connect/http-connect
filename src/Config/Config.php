@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace HttpConnect\HttpConnect\Config;
 
 use HttpConnect\HttpConnect\Config\Exceptions\PropertyNotFoundException;
-use HttpConnect\HttpConnect\Validation\Exceptions\MetadataValidationFailedException;
 use HttpConnect\HttpConnect\Validation\Traits\DefinesSinglePropertyValidation;
 use HttpConnect\HttpConnect\Validation\Traits\HandlesMetadataValidation;
+use HttpConnect\Standard\Config\RepositoryInterface;
+use HttpConnect\Standard\Validation\Exceptions\MetadataValidationFailedException;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints as Assert;
 

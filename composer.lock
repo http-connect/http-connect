@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "887cae47d4af09c21a24ae88325fe7cf",
+    "content-hash": "369c3da4a68594af199cd4c91df01c8e",
     "packages": [
         {
             "name": "composer/semver",
@@ -66,6 +66,49 @@
                 "versioning"
             ],
             "time": "2020-01-13T12:06:48+00:00"
+        },
+        {
+            "name": "http-connect/standard",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/http-connect/standard.git",
+                "reference": "cf551b33a272bbec2574b96030cbdb2bd7814e89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/http-connect/standard/zipball/cf551b33a272bbec2574b96030cbdb2bd7814e89",
+                "reference": "cf551b33a272bbec2574b96030cbdb2bd7814e89",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2",
+                "psr/container": "^1.0",
+                "psr/http-client": "^1.0",
+                "psr/http-factory": "^1.0",
+                "psr/log": "^1.1",
+                "symfony/validator": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "HttpConnect\\Standard\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stevan Pavlovic",
+                    "email": "pavlovicmstevan@gmail.com",
+                    "homepage": "https://stevanpavlovic.github.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "HttpConnect Standard Interfaces",
+            "time": "2020-02-24T17:01:03+00:00"
         },
         {
             "name": "nyholm/psr7",

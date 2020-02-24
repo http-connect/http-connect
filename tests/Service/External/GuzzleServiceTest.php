@@ -7,7 +7,7 @@ namespace HttpConnect\HttpConnect\Tests\Service\External;
 use HttpConnect\HttpConnect\Action\AnonymousAction;
 use HttpConnect\HttpConnect\Service\External\Exceptions\RequirementNotMetException;
 use HttpConnect\HttpConnect\Service\External\GuzzleAdapterService;
-use HttpConnect\HttpConnect\Validation\Exceptions\MetadataValidationFailedException;
+use HttpConnect\Standard\Validation\Exceptions\MetadataValidationFailedException;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Client\ClientExceptionInterface;
 

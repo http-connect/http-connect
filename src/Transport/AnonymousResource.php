@@ -6,6 +6,7 @@ namespace HttpConnect\HttpConnect\Transport;
 
 use ArrayAccess;
 use BadMethodCallException;
+use HttpConnect\Standard\ResourceInterface;
 use OutOfBoundsException;
 use HttpConnect\HttpConnect\Transport\Traits\StringifiesAsJson;
 

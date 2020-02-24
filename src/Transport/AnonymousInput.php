@@ -6,6 +6,7 @@ namespace HttpConnect\HttpConnect\Transport;
 
 use HttpConnect\HttpConnect\Transport\Traits\HasNoValidation;
 use HttpConnect\HttpConnect\Transport\Traits\StringifiesAsJson;
+use HttpConnect\Standard\InputInterface;
 
 final class AnonymousInput implements InputInterface
 {

@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace HttpConnect\HttpConnect\Environment;
 
-use HttpConnect\HttpConnect\Config\RepositoryInterface;
+use HttpConnect\Standard\Config\RepositoryInterface;
+use HttpConnect\Standard\AuthInterface;
+use HttpConnect\Standard\EnvironmentInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Log\LoggerInterface;
-use HttpConnect\HttpConnect\Auth\AuthInterface;
 
 class Environment implements EnvironmentInterface
 {
