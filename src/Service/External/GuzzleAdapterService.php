@@ -45,8 +45,7 @@ class GuzzleAdapterService extends Service implements AdapterInterface
         return new Environment(
             static::createAuth($config),
             $config,
-            static::createClient($config),
-            null
+            static::createClient($config)
         );
     }
 

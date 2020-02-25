@@ -34,21 +34,14 @@ class Environment implements EnvironmentInterface
     private $config;
 
     /**
-     * @var LoggerInterface|null
-     */
-    private $logger;
-
-    /**
      * @param AuthInterface $auth
      * @param RepositoryInterface $config
      * @param ClientInterface|null $client
-     * @param LoggerInterface|null $logger
      */
     public function __construct(
         AuthInterface $auth,
         RepositoryInterface $config,
-        ?ClientInterface $client = null,
-        ?LoggerInterface $logger = null
+        ?ClientInterface $client = null
     ) {
         try {
             /** @var string $baseUri */
@@ -61,7 +54,6 @@ class Environment implements EnvironmentInterface
         $this->auth = $auth;
         $this->client = $client;
         $this->config = $config;
-        $this->logger = $logger;
     }
 
     /**
@@ -101,6 +93,6 @@ class Environment implements EnvironmentInterface
      */
     public function getLogger(): ?LoggerInterface
     {
-        return $this->logger;
+        return null;
     }
 }

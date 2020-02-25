@@ -8,7 +8,6 @@ use HttpConnect\Standard\Config\RepositoryInterface;
 use HttpConnect\Standard\EnvironmentInterface;
 use HttpConnect\Standard\AuthInterface;
 use Psr\Http\Client\ClientInterface;
-use Psr\Log\LoggerInterface;
 
 interface FactoryMethodsInterface
 {
@@ -35,10 +34,4 @@ interface FactoryMethodsInterface
      * @return ClientInterface
      */
     public static function createClient(RepositoryInterface $config): ClientInterface;
-
-    /**
-     * @param RepositoryInterface $config
-     * @return LoggerInterface
-     */
-    public static function createLogger(RepositoryInterface $config): LoggerInterface;
 }

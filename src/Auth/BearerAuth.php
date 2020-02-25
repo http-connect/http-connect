@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace HttpConnect\HttpConnect\Auth;
 
+use HttpConnect\Standard\AuthInterface;
 use Psr\Http\Message\RequestInterface;
 
 class BearerAuth implements AuthInterface
